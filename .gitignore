@@ -1,0 +1,8 @@
+# ignore compiled files
+*.o
+
+# ignore directories
+bin/
+build/
+img/
+tessdata/
