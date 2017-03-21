@@ -15,6 +15,9 @@ sudo apt-get install libicu-dev
 sudo apt-get install libpango1.0-dev
 sudo apt-get install libcairo2-dev
 
+# install OpenCV
+sudo apt-get install libopencv-dev
+
 # install leptonica
 wget http://www.leptonica.com/source/leptonica-1.74.1.tar.gz
 tar -zxvf leptonica-1.74.1.tar.gz

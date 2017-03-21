@@ -1,7 +1,7 @@
 # compiler options
 CC := g++ -std=c++14
-CFLAGS := -Wall
-LIB := -L/usr/local/lib -llept -ltesseract
+CFLAGS := -Wall `pkg-config --cflags opencv`
+LIB := -L/usr/local/lib -llept -ltesseract `pkg-config --libs opencv`
 INC := -I/usr/local/include/tesseract
 
 # source files
@@ -22,7 +22,7 @@ debug: $(TARGET)
 # build artifact
 $(TARGET): $(SOURCES)
 	@mkdir -p $(OUTPUTDIR)
-	$(CC) $(INC) -o $(TARGET) $(SOURCES) $(LIB)
+	$(CC) $(CFLAGS) $(INC) -o $(TARGET) $(SOURCES) $(LIB)
 
 # remove unnecessary files
 .PHONY: clean
